@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Smart Solutions Digi - Custom Website Design, Web Development, and Digital Solutions. High-performance, SEO-ready web services.">
+    <title>Smart Solutions Digi | High-Performance Digital Agency</title>
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="css/styles.css" as="style">
+    <!-- Fonts: Using System Fonts for Max Speed -->
+
+    <!-- Bootstrap CSS (Minified) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Critical Inline CSS */
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .hero {
+            padding: 80px 0;
+            background-color: #fdfdfd;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-weight: 800;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+        }
+
+        .text-primary-custom {
+            color: #F94A29;
+        }
+
+        .btn-custom {
+            background-color: #F94A29;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .btn-custom:hover {
+            background-color: #e03e1f;
+            transform: translateY(-2px);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top border-bottom-custom py-4">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Smart Solutions" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="work.html">Work</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Antigravity Hero -->
+    <!-- 1. Antigravity Hero -->
+    <section class="hero-section" id="home">
+        <canvas id="hero-canvas" class="bg-canvas"></canvas>
+        <div class="hero-content fade-in-up">
+            <!-- Brand Mark similar to reference -->
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <span class="text-accent fw-bold fs-4 me-2">▲</span>
+                <span class="fs-5 fw-bold ms-1" style="letter-spacing: -0.5px;">Smart Solutions</span>
+            </div>
+
+            <h1 class="display-1">We Engineer the Web<br>for Speed, Scale, and <span class="text-accent">Serious
+                    Growth.</span></h1>
+            <p class="lead mt-4 mb-5 mx-auto">No fluff. No bloated code.<br>Just high-performance digital products built
+                to win.</p>
+
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#contact" class="btn btn-dark rounded-pill px-5 py-3 fw-bold shadow-lg">Start Project</a>
+                <a href="work.html" class="btn btn-outline-dark rounded-pill px-5 py-3 fw-bold">Explore Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="js/hero-particles.js" defer></script>
+    <script src="js/scroll-effect.js" defer></script>
+    <script src="js/typewriter.js" defer></script>
+
+
+    <!-- 2. Visual Services Grid -->
+    <section class="services-section" id="expertise">
+        <div class="container-fluid px-0">
+            <div class="px-5 mb-5">
+                <span class="eyebrow">Expertise</span>
+                <h2>We Build Ecosystems.</h2>
+            </div>
+            <div class="services-grid px-5">
+                <div class="service-card">
+                    <img src="assets/images/service_ui.jpg" alt="UI Design" loading="lazy">
+                    <div class="service-content">
+                        <h3>UI/UX Design</h3>
+                        <p>Immersive interfaces that guide behavior and delight users.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/service_dev.jpg" alt="Web Development" loading="lazy">
+                    <div class="service-content">
+                        <h3>Web Engineering</h3>
+                        <p>Robust, scalable frontend and backend architectures.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="assets/images/service_cloud.jpg" alt="Cloud Infrastructure" loading="lazy">
+                    <div class="service-content">
+                        <h3>Cloud & Scale</h3>
+                        <p>AWS/Azure infrastructure that grows with your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Engineering Excellence (Localization Feature) -->
+    <section class="engineering-section">
+        <div class="engineering-wrapper">
+            <div class="engineering-content">
+                <span class="eyebrow">Engineering Excellence / Global Standards</span>
+                <h2>World-Class Engineering,<br>Built for <span class="text-accent">Global Scale.</span></h2>
+                <p class="lead mt-4 mb-5">We combine the discipline of global standards with cutting-edge innovation.
+                    Our code isn't just functional; it's a masterpiece of efficiency.</p>
+
+                <ul class="feature-list">
+                    <li><span>01</span> 100% In-House Team (No Freelancers)</li>
+                    <li><span>02</span> Time-Zone Aligned Delivery</li>
+                    <li><span>03</span> Enterprise-Grade Security</li>
+                </ul>
+            </div>
+            <div class="engineering-image">
+                <!-- Using Sourced Indian Tech Team Image -->
+                <img src="assets/images/indian_team_backup.jpg" alt="Smart Solutions Team in Bangalore Office"
+                    loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Antigravity Floating Icons (Replaces Tech Matrix) -->
+    <section class="antigravity-float-section">
+        <div class="container-fluid px-5">
+            <div class="float-headline">
+                <h2>Smart Solutions is your agentic<br>development partner, evolving the<br>web into the <span
+                        class="text-accent">performance era.</span></h2>
+            </div>
+
+            <!-- Floating Bubbles (Web Dev Stack) -->
+            <div class="bubbles-container">
+                <div class="float-bubble" title="React"><i class="fab fa-react"></i></div>
+                <div class="float-bubble" title="Node.js"><i class="fab fa-node-js"></i></div>
+                <div class="float-bubble" title="Python"><i class="fab fa-python"></i></div>
+                <div class="float-bubble" title="AWS"><i class="fab fa-aws"></i></div>
+                <div class="float-bubble" title="Docker"><i class="fab fa-docker"></i></div>
+                <div class="float-bubble" title="GitHub"><i class="fab fa-github"></i></div>
+                <div class="float-bubble" title="Database"><i class="fas fa-database"></i></div>
+                <div class="float-bubble" title="Code"><i class="fas fa-code"></i></div>
+                <div class="float-bubble" title="Terminal"><i class="fas fa-terminal"></i></div>
+                <div class="float-bubble" title="Performance"><i class="fas fa-bolt"></i></div>
+            </div>
+
+            <!-- Code Preview Window -->
+            <div class="code-preview-wrapper">
+                <div class="code-window">
+                    <div class="code-window-header">
+                        <div class="window-dot"></div>
+                        <div class="window-dot"></div>
+                        <div class="window-dot"></div>
+                    </div>
+                    <div class="code-content">
+                        <span class="code-line"><span class="cl-keyword">export default</span> <span
+                                class="cl-keyword">function</span> <span class="cl-func">SmartSolutions</span>()
+                            {</span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">const</span> speed = <span
+                                class="cl-func">optimizePerformance</span>();</span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">const</span> accessibility = <span
+                                class="cl-func">enforceA11y</span>();</span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">const</span> scalability = <span
+                                class="cl-func">designForGrowth</span>();</span>
+                        <span class="code-line"><br></span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="cl-comment">// We don't chase
+                                trends.</span></span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="cl-comment">// We engineer
+                                outcomes.</span></span>
+                        <span class="code-line"><br></span>
+                        <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">return</span> <span
+                                class="cl-func">buildWeb</span>({</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;speed,</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;accessibility,</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;scalability,</span>
+                        <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;lighthouse: <span
+                                class="cl-string">90+</span></span>
+                        <span class="code-line">&nbsp;&nbsp;});</span>
+                        <span class="code-line">}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Editorial Philosophy (Replaces Proof Section) -->
+    <section class="philosophy-editorial">
+        <div class="philo-grid">
+            <div class="philo-content">
+                <span class="eyebrow">Our Philosophy</span>
+                <h2 class="philo-headline">
+                    We don’t design for likes.<br>
+                    We design for <span class="anim-underline">speed</span>, clarity, and growth.
+                </h2>
+                <p class="philo-desc">Most agencies look "nice". Very few look intentional. We separate you from 90% of
+                    competitors by focusing on metrics that move the needle.</p>
+            </div>
+
+            <div class="philo-metrics">
+                <div class="metric-item">
+                    <span class="metric-val">98%</span>
+                    <span class="metric-label">Client Satisfaction</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-val">90+</span>
+                    <span class="metric-label">Lighthouse Scores</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-val">0.1s</span>
+                    <span class="metric-label">Layout Shifts</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Visual Process Journey (Zig-Zag) -->
+    <section class="process-visual-section" id="process">
+        <div class="text-center mb-5">
+            <span class="eyebrow">The Process</span>
+            <h2>How We Execute</h2>
+        </div>
+
+        <div class="process-row">
+            <div class="process-content">
+                <span class="process-marker">01 // DISCOVER</span>
+                <h3>Deep Dive & Strategy</h3>
+                <p class="text-muted mt-3">We don't start coding until we understand your business model. We workshop
+                    with your stakeholders to define success metrics.</p>
+            </div>
+            <div class="process-image">
+                <img src="assets/images/process_discover.jpg" alt="Discovery Session" loading="lazy">
+            </div>
+        </div>
+
+        <div class="process-row">
+            <div class="process-content">
+                <span class="process-marker">02 // DESIGN</span>
+                <h3>Visual Architecture</h3>
+                <p class="text-muted mt-3">We prototype high-fidelity interfaces using Figma. Every pixel is
+                    intentional. Every interaction is calculated.</p>
+            </div>
+            <div class="process-image">
+                <img src="assets/images/process_design.jpg" alt="Design Phase" loading="lazy">
+            </div>
+        </div>
+
+        <div class="process-row">
+            <div class="process-content">
+                <span class="process-marker">03 // BUILD</span>
+                <h3>Engineering</h3>
+                <p class="text-muted mt-3">Clean, semantic, and accessible code. We use modern stacks (React, Next.js)
+                    to ensure future-proofing.</p>
+            </div>
+            <div class="process-image">
+                <img src="assets/images/process_build.jpg" alt="Coding Phase" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Immersive Portfolio -->
+    <section class="portfolio-immersive" id="work">
+        <div class="d-flex justify-content-between align-items-end">
+            <div>
+                <span class="eyebrow">Selected Work</span>
+                <h2>Recent Deployments</h2>
+            </div>
+            <a href="work.html" class="btn-editorial">View All <span>&rarr;</span></a>
+        </div>
+
+        <div class="portfolio-grid-visual">
+            <div class="portfolio-item-visual">
+                <img src="assets/images/port_fintech.jpg" alt="Fintech Dashboard" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Fintech Dashboard</h4>
+                    <span>React • D3.js</span>
+                </div>
+            </div>
+            <div class="portfolio-item-visual">
+                <img src="assets/images/port_fashion.jpg" alt="Fashion Store" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Vogue Ecommerce</h4>
+                    <span>Shopify • Liquid</span>
+                </div>
+            </div>
+            <div class="portfolio-item-visual">
+                <img src="assets/images/port_energy.jpg" alt="Clean Energy" loading="lazy">
+                <div class="portfolio-overlay">
+                    <h4>Green Power</h4>
+                    <span>Next.js • Tailwind</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Minimal CTA -->
+    <section class="contact-section" id="contact">
+        <canvas id="contact-canvas" class="bg-canvas"></canvas>
+        <div class="cta-box">
+            <h2 class="mb-4">Have a serious project?<br>Let’s talk.</h2>
+            <p class="lead mx-auto mb-5">We are currently accepting new clients for Q1 2025.</p>
+
+            <form class="contact-form" action="#" method="POST">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control-editorial" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="email" class="form-control-editorial" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <select class="form-control-editorial" required>
+                                <option value="" disabled selected>Project Type</option>
+                                <option value="web_design">Web Design & Development</option>
+                                <option value="application">Web Application / SaaS</option>
+                                <option value="ecommerce">E-Commerce</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <textarea class="form-control-editorial" rows="4" placeholder="Tell us about your goals..."
+                                required></textarea>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <button type="submit" class="btn-editorial"
+                            style="font-size: 1.5rem; background: none; border: none; border-bottom: 2px solid var(--primary-accent); cursor: pointer;">
+                            Send Request <span>&rarr;</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 border-top-custom text-center">
+        <div class="container">
+            <p class="mb-0 text-muted small">&copy; 2025 Smart Solutions Digi. Engineered for Performance.</p>
+        </div>
+    </footer>
+
+    <!-- JS: Defer for performance -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>

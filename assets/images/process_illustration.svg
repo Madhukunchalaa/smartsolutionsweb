@@ -1,0 +1,12 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="100" cy="100" r="40" fill="white" stroke="#F94A29" stroke-width="4"/>
+<text x="100" y="110" font-family="Arial" font-size="24" text-anchor="middle" fill="#333" font-weight="bold">1</text>
+<circle cx="250" cy="200" r="40" fill="white" stroke="#333333" stroke-width="4"/>
+<text x="250" y="210" font-family="Arial" font-size="24" text-anchor="middle" fill="#333" font-weight="bold">2</text>
+<circle cx="400" cy="300" r="40" fill="#F94A29"/>
+<text x="400" y="310" font-family="Arial" font-size="24" text-anchor="middle" fill="white" font-weight="bold">3</text>
+<path d="M130 120C160 140 190 170 220 180" stroke="#E9ECEF" stroke-width="4" stroke-dasharray="8 8"/>
+<path d="M280 220C310 240 340 270 370 280" stroke="#E9ECEF" stroke-width="4" stroke-dasharray="8 8"/>
+<circle cx="100" cy="100" r="60" stroke="#F94A29" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+<circle cx="250" cy="200" r="60" stroke="#333333" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+</svg>
