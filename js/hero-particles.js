@@ -105,7 +105,11 @@ function createParticleSystem(canvasId) {
         requestAnimationFrame(animate);
     }
 
-    window.addEventListener('resize', resize);
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resize, 200);
+    });
     window.addEventListener('mousemove', e => {
         // Offset mouse by canvas position to be accurate relative to the specific canvas
         const rect = canvas.getBoundingClientRect();

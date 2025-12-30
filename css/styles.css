@@ -646,6 +646,15 @@ h3 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px; }
 .metric-item:nth-child(2) { animation-delay: 0.4s; }
 .metric-item:nth-child(3) { animation-delay: 0.6s; }
 
+.process-marker {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #4a4a4a; /* Darker for accessibility */
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
 .metric-val {
     display: block;
     font-size: 5rem;
@@ -653,6 +662,16 @@ h3 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px; }
     line-height: 1;
     color: var(--primary-accent);
     letter-spacing: -2px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #4a4a4a; /* Darker for accessibility */
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .metric-label {
@@ -851,4 +870,15 @@ textarea.form-control-editorial {
     height: 60px; /* Adjust size */
     width: auto;
     object-fit: contain;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
