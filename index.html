@@ -14,55 +14,105 @@
     <link rel="preload" href="css/styles.css" as="style">
     <!-- Fonts: Using System Fonts for Max Speed -->
 
-    <!-- Bootstrap CSS (Minified) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-
     <style>
-        /* Critical Inline CSS */
-        body {
-            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #fff;
-            color: #333;
+        /* Critical Inline CSS - Hero & Reset */
+        :root {
+            --primary-accent: #F94A29;
+            --text-main: #0F172A;
+            --text-muted: #64748B;
+            --bg-main: #FFFFFF;
         }
 
-        .hero {
-            padding: 80px 0;
-            background-color: #fdfdfd;
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .hero-section {
+            min-height: 90vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
             overflow: hidden;
         }
 
-        .hero h1 {
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            padding: 2rem;
+        }
+
+        .display-1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
             font-weight: 800;
-            color: #1a1a1a;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
         }
 
-        .text-primary-custom {
-            color: #F94A29;
+        .text-accent {
+            color: var(--primary-accent) !important;
         }
 
-        .btn-custom {
-            background-color: #F94A29;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            border: none;
-            font-weight: 600;
-            transition: transform 0.2s;
+        .bg-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
 
-        .btn-custom:hover {
-            background-color: #e03e1f;
-            transform: translateY(-2px);
-            color: white;
+        .d-flex {
+            display: flex;
         }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .fs-4 {
+            font-size: 1.5rem !important;
+        }
+
+        .fs-5 {
+            font-size: 1.25rem !important;
+        }
+
+        .fw-bold {
+            font-weight: 700 !important;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        /* Defer non-critical */
     </style>
+
+    <!-- Deferred CSS Loading -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/styles.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </noscript>
 </head>
 
 <body>
@@ -70,7 +120,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-white fixed-top border-bottom-custom py-4">
         <div class="container-fluid px-5">
-            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt="Smart Solutions" height="40"></a>
+            <a class="navbar-brand" href="#"><img src="assets/images/logo.webp" alt="Smart Solutions" height="40"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -125,14 +175,15 @@
                 </div>
                 <div class="services-grid px-5">
                     <div class="service-card">
-                        <img src="assets/images/service_ui.jpg" alt="UI Design" width="800" height="600" loading="lazy">
+                        <img src="assets/images/service_ui.webp" alt="UI Design" width="800" height="600"
+                            loading="lazy">
                         <div class="service-content">
                             <h3>UI/UX Design</h3>
                             <p>Immersive interfaces that guide behavior and delight users.</p>
                         </div>
                     </div>
                     <div class="service-card">
-                        <img src="assets/images/service_dev.jpg" alt="Web Development" width="800" height="533"
+                        <img src="assets/images/service_dev.webp" alt="Web Development" width="800" height="533"
                             loading="lazy">
                         <div class="service-content">
                             <h3>Web Engineering</h3>
@@ -140,7 +191,7 @@
                         </div>
                     </div>
                     <div class="service-card">
-                        <img src="assets/images/service_cloud.jpg" alt="Cloud Infrastructure" width="800" height="532"
+                        <img src="assets/images/service_cloud.webp" alt="Cloud Infrastructure" width="800" height="532"
                             loading="lazy">
                         <div class="service-content">
                             <h3>Cloud & Scale</h3>
@@ -169,7 +220,7 @@
                 </div>
                 <div class="engineering-image">
                     <!-- Using Sourced Indian Tech Team Image -->
-                    <img src="assets/images/indian_team_backup.jpg" alt="Smart Solutions Team in Bangalore Office"
+                    <img src="assets/images/indian_team_backup.webp" alt="Smart Solutions Team in Bangalore Office"
                         width="1000" height="667" loading="lazy">
                 </div>
             </div>
@@ -283,7 +334,7 @@
                         with your stakeholders to define success metrics.</p>
                 </div>
                 <div class="process-image">
-                    <img src="assets/images/process_discover.jpg" alt="Discovery Session" width="800" height="533"
+                    <img src="assets/images/process_discover.webp" alt="Discovery Session" width="800" height="533"
                         loading="lazy">
                 </div>
             </div>
@@ -296,7 +347,7 @@
                         intentional. Every interaction is calculated.</p>
                 </div>
                 <div class="process-image">
-                    <img src="assets/images/process_design.jpg" alt="Design Phase" width="800" height="533"
+                    <img src="assets/images/process_design.webp" alt="Design Phase" width="800" height="533"
                         loading="lazy">
                 </div>
             </div>
@@ -310,7 +361,7 @@
                         to ensure future-proofing.</p>
                 </div>
                 <div class="process-image">
-                    <img src="assets/images/process_build.jpg" alt="Coding Phase" width="800" height="534"
+                    <img src="assets/images/process_build.webp" alt="Coding Phase" width="800" height="534"
                         loading="lazy">
                 </div>
             </div>
@@ -328,7 +379,7 @@
 
             <div class="portfolio-grid-visual">
                 <div class="portfolio-item-visual">
-                    <img src="assets/images/port_fintech.jpg" alt="Fintech Dashboard" width="600" height="400"
+                    <img src="assets/images/port_fintech.webp" alt="Fintech Dashboard" width="600" height="400"
                         loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Fintech Dashboard</h3>
@@ -336,7 +387,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item-visual">
-                    <img src="assets/images/port_fashion.jpg" alt="Fashion Store" width="600" height="400"
+                    <img src="assets/images/port_fashion.webp" alt="Fashion Store" width="600" height="400"
                         loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Vogue Ecommerce</h3>
@@ -344,7 +395,8 @@
                     </div>
                 </div>
                 <div class="portfolio-item-visual">
-                    <img src="assets/images/port_energy.jpg" alt="Clean Energy" width="600" height="450" loading="lazy">
+                    <img src="assets/images/port_energy.webp" alt="Clean Energy" width="600" height="450"
+                        loading="lazy">
                     <div class="portfolio-overlay">
                         <h3>Green Power</h3>
                         <span>Next.js • Tailwind</span>
