@@ -6,11 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // We want to replicate:
     // Smart Solutions is your agentic<br>development partner, evolving the<br>web into the <span class="text-accent">performance era.</span>
     const segments = [
-        { text: "Smart Solutions is your agentic", type: "text" },
-        { type: "br" },
-        { text: "development partner, evolving the", type: "text" },
-        { type: "br" },
-        { text: "web into the ", type: "text" },
+        { text: "Smart Solutions is your agentic development partner, evolving the web into the ", type: "text" },
         { text: "performance era.", type: "span", className: "text-accent" },
     ];
 
