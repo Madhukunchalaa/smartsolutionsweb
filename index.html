@@ -99,6 +99,34 @@
             margin-bottom: 1.5rem !important;
         }
 
+        /* Critical Navbar to prevent CLS */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1030;
+            background-color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar .container-fluid {
+            width: 100%;
+            padding-right: 1.5rem;
+            padding-left: 1.5rem;
+            margin-right: auto;
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         /* Defer non-critical */
     </style>
 
@@ -121,7 +149,7 @@
     <nav class="navbar navbar-expand-lg bg-white fixed-top border-bottom-custom py-4">
         <div class="container-fluid px-5">
             <a class="navbar-brand" href="#"><img src="assets/images/logo.webp" alt="Smart Solutions" width="116"
-                    height="59" style="height: 40px; width: auto;"></a>
+                    height="59" style="height: 55px; width: auto;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -144,8 +172,8 @@
             <div class="hero-content fade-in-up">
                 <!-- Brand Mark similar to reference -->
                 <div class="d-flex justify-content-center align-items-center mb-4">
-                    <span class="text-accent fw-bold fs-4 me-2">▲</span>
-                    <span class="fs-5 fw-bold ms-1" style="letter-spacing: -0.5px;">Smart Solutions</span>
+                    <span class="text-dark fw-bold fs-4 me-2">▲</span>
+                    <span class="text-accent fs-5 fw-bold ms-1" style="letter-spacing: -0.5px;">Smart Solutions</span>
                 </div>
 
                 <h1 class="display-1">We Engineer the Web<br>for Speed, Scale, and <span class="text-accent">Serious
@@ -176,7 +204,7 @@
                 </div>
                 <div class="services-grid px-5">
                     <div class="service-card">
-                        <img src="assets/images/service_ui.webp" alt="UI Design" width="800" height="600"
+                        <img src="assets/images/uiux.jpg" alt="UI Design" width="800" height="600"
                             loading="lazy">
                         <div class="service-content">
                             <h3>UI/UX Design</h3>
@@ -187,7 +215,7 @@
                         <img src="assets/images/service_dev.webp" alt="Web Development" width="800" height="533"
                             loading="lazy">
                         <div class="service-content">
-                            <h3>Web Engineering</h3>
+                            <h3>Web Development</h3>
                             <p>Robust, scalable frontend and backend architectures.</p>
                         </div>
                     </div>
@@ -221,7 +249,7 @@
                 </div>
                 <div class="engineering-image">
                     <!-- Using Sourced Indian Tech Team Image -->
-                    <img src="assets/images/indian_team_backup.webp" alt="Smart Solutions Team in Bangalore Office"
+                    <img src="assets/images/team.png" alt="Smart Solutions Team in Bangalore Office"
                         width="1000" height="667" loading="lazy">
                 </div>
             </div>
@@ -250,38 +278,54 @@
                 </div>
 
                 <!-- Code Preview Window -->
+                <!-- Performance Dashboard (Replaces Code Window) -->
                 <div class="code-preview-wrapper">
-                    <div class="code-window">
-                        <div class="code-window-header">
-                            <div class="window-dot"></div>
-                            <div class="window-dot"></div>
-                            <div class="window-dot"></div>
+                    <div class="performance-dashboard-card">
+                        <div class="dashboard-header">
+                            <span class="dash-title">Live Performance Metrics</span>
+                            <span class="dash-status"><span class="status-dot"></span> System Optimal</span>
                         </div>
-                        <div class="code-content">
-                            <span class="code-line"><span class="cl-keyword">export default</span> <span
-                                    class="cl-keyword">function</span> <span class="cl-func">SmartSolutions</span>()
-                                {</span>
-                            <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">const</span> speed = <span
-                                    class="cl-func">optimizePerformance</span>();</span>
-                            <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">const</span> accessibility =
-                                <span class="cl-func">enforceA11y</span>();</span>
-                            <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">const</span> scalability =
-                                <span class="cl-func">designForGrowth</span>();</span>
-                            <span class="code-line"><br></span>
-                            <span class="code-line">&nbsp;&nbsp;<span class="cl-comment">// We don't chase
-                                    trends.</span></span>
-                            <span class="code-line">&nbsp;&nbsp;<span class="cl-comment">// We engineer
-                                    outcomes.</span></span>
-                            <span class="code-line"><br></span>
-                            <span class="code-line">&nbsp;&nbsp;<span class="cl-keyword">return</span> <span
-                                    class="cl-func">buildWeb</span>({</span>
-                            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;speed,</span>
-                            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;accessibility,</span>
-                            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;scalability,</span>
-                            <span class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;lighthouse: <span
-                                    class="cl-string">90+</span></span>
-                            <span class="code-line">&nbsp;&nbsp;});</span>
-                            <span class="code-line">}</span>
+
+                        <div class="metrics-row">
+                            <!-- Metric 1: Performance -->
+                            <div class="metric-item">
+                                <div class="circle-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="98, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="20.35" class="percentage">98</text>
+                                    </svg>
+                                </div>
+                                <span class="metric-label">Performance</span>
+                            </div>
+
+                            <!-- Metric 2: SEO -->
+                            <div class="metric-item">
+                                <div class="circle-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart blue">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="100, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="20.35" class="percentage">100</text>
+                                    </svg>
+                                </div>
+                                <span class="metric-label">SEO Score</span>
+                            </div>
+
+                            <!-- Growth Graph Mini -->
+                            <div class="growth-mini-chart">
+                                <div class="chart-bars">
+                                    <div class="bar" style="height: 40%"></div>
+                                    <div class="bar" style="height: 65%"></div>
+                                    <div class="bar" style="height: 50%"></div>
+                                    <div class="bar" style="height: 85%"></div>
+                                    <div class="bar active" style="height: 100%"></div>
+                                </div>
+                                <span class="metric-label">Traffic Growth</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,8 +379,8 @@
                         with your stakeholders to define success metrics.</p>
                 </div>
                 <div class="process-image">
-                    <img src="assets/images/process_discover.webp" alt="Discovery Session" width="800" height="533"
-                        loading="lazy">
+                    <img src="assets/images/man-sitting-front-two-computer-monitors.jpg" alt="Deep Dive Strategy"
+                        width="800" height="533" loading="lazy">
                 </div>
             </div>
 
@@ -348,8 +392,8 @@
                         intentional. Every interaction is calculated.</p>
                 </div>
                 <div class="process-image">
-                    <img src="assets/images/process_design.webp" alt="Design Phase" width="800" height="533"
-                        loading="lazy">
+                    <img src="assets/images/website-design-software-provide-modish-template-online-retail-business.jpg"
+                        alt="Visual Architecture" width="800" height="533" loading="lazy">
                 </div>
             </div>
 
@@ -379,30 +423,36 @@
             </div>
 
             <div class="portfolio-grid-visual">
-                <div class="portfolio-item-visual">
-                    <img src="assets/images/port_fintech.webp" alt="Fintech Dashboard" width="600" height="400"
+                <!-- 1. Rose of Australia -->
+                <a href="https://roseofaustraliahotel.com.au/" target="_blank" class="portfolio-item-visual"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="assets/images/rosehotel.webp" alt="Rose of Australia Hotel" width="600" height="400"
                         loading="lazy">
                     <div class="portfolio-overlay">
-                        <h3>Fintech Dashboard</h3>
-                        <span>React • D3.js</span>
+                        <h3>Rose of Australia</h3>
+                        <span>Hospitality • Lifestyle</span>
                     </div>
-                </div>
-                <div class="portfolio-item-visual">
-                    <img src="assets/images/port_fashion.webp" alt="Fashion Store" width="600" height="400"
+                </a>
+
+                <!-- 2. Boston Renal -->
+                <a href="#" class="portfolio-item-visual" style="text-decoration: none; color: inherit;">
+                    <img src="assets/images/boston_renal.png" alt="Boston Renal" width="600" height="400"
                         loading="lazy">
                     <div class="portfolio-overlay">
-                        <h3>Vogue Ecommerce</h3>
-                        <span>Shopify • Liquid</span>
+                        <h3>Boston Renal</h3>
+                        <span>Medical • Healthcare</span>
                     </div>
-                </div>
-                <div class="portfolio-item-visual">
-                    <img src="assets/images/port_energy.webp" alt="Clean Energy" width="600" height="450"
-                        loading="lazy">
+                </a>
+
+                <!-- 3. iLink Insurance -->
+                <a href="https://www.ilinkinsurance.com.au/" target="_blank" class="portfolio-item-visual"
+                    style="text-decoration: none; color: inherit;">
+                    <img src="assets/images/ilink.webp" alt="iLink Insurance" width="600" height="400" loading="lazy">
                     <div class="portfolio-overlay">
-                        <h3>Green Power</h3>
-                        <span>Next.js • Tailwind</span>
+                        <h3>iLink Insurance</h3>
+                        <span>Insurance • Web App</span>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 

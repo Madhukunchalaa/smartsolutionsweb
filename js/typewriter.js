@@ -114,19 +114,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Start fresh if empty
                     isTyping = true;
                     type();
-                } else if (!isTyping && headline.textContent !== "") {
-                    // Check if it was fully typed before, we want to RESTART it.
-                    // But wait, if we scroll up and down quickly, we might want to just let it sit if it's already there?
-                    // The requirement is "apply all the time when ever we visit this section".
-                    // Usually this implies resetting.
-                    clearTyping();
-                    isTyping = true;
-                    type();
+                    observer.unobserve(headline); // Run only once
                 }
-            } else {
-                // When leaving the view, reset everything so it's ready to type again on re-entry
-                clearTyping();
+                // Removed the logic to restart if already typed
             }
+            // Removed 'else' block to prevent clearing on exit
         });
     }, { threshold: 0.5 }); // Start when 50% visible
 

@@ -434,6 +434,7 @@ h3 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px; }
     padding: 2rem;
     opacity: 0;
     transition: opacity 0.3s;
+    color: white;
 }
 .portfolio-item-visual:hover .portfolio-overlay { opacity: 1; }
 .portfolio-overlay h4 { color: #fff; margin-bottom: 0.25rem; }
@@ -1074,5 +1075,177 @@ textarea.form-control-editorial {
     .nav-link {
         margin-left: 0 !important;
         font-size: 1.25rem !important;
+    }
+}
+
+/* Performance Dashboard Styles */
+.performance-dashboard-card {
+    background: rgba(15, 23, 42, 0.85); /* Dark Glass */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle Gradient Glow effect */
+.performance-dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(249, 74, 41, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.dash-title {
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.dash-status {
+    color: #4ade80; /* Green */
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #4ade80;
+    animation: pulse-status 2s infinite;
+}
+
+@keyframes pulse-status {
+    0% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7); }
+    70% { opacity: 1; box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+    100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
+}
+
+.metrics-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+    gap: 1rem;
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.metric-label {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/* Circular Charts */
+.circle-chart {
+    width: 80px;
+    height: 80px;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.circle-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 2.5;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    animation: progress 1.5s ease-out forwards;
+}
+
+.circular-chart.orange .circle { stroke: var(--primary-accent); }
+.circular-chart.blue .circle { stroke: #3b82f6; }
+
+.percentage {
+    fill: #fff;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 0.6em;
+    text-anchor: middle;
+}
+
+@keyframes progress {
+    0% { stroke-dasharray: 0 100; }
+}
+
+/* Mini Bar Chart */
+.growth-mini-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 80px;
+    padding-bottom: 2px;
+}
+
+.bar {
+    width: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    transition: height 0.3s ease;
+}
+
+.bar.active {
+    background: var(--primary-accent);
+    box-shadow: 0 0 10px rgba(249, 74, 41, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .metrics-row {
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 }
