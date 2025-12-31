@@ -877,8 +877,200 @@ textarea.form-control-editorial {
     width: 1px;
     height: 1px;
     padding: 0;
-    margin: -1px;
-    overflow: hidden;
     clip: rect(0, 0, 0, 0);
     border: 0;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (Max-Width: 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-section: 60px; /* Halve spacing on mobile */
+    }
+    
+    /* Global Typography Adjustments */
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.5rem; }
+    h3 { font-size: 1.5rem; }
+    .lead { font-size: 1.1rem; }
+    
+    /* Layout Containers */
+    .container-fluid.px-5 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    /* 1. Hero Section */
+    .hero-section {
+        min-height: auto;
+        padding-top: 120px; /* Account for fixed nav */
+        padding-bottom: 60px;
+    }
+    
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .display-1 {
+        font-size: 3.5rem; /* Ensure title fits */
+    }
+
+    /* 2. Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        height: 300px; /* Smaller height for mobile */
+    }
+
+    /* 3. Engineering Section */
+    .engineering-wrapper {
+        display: block; /* Stack */
+    }
+    
+    .engineering-image {
+        height: 40vh; /* Restore from Tablet Logic */
+        margin-bottom: 2rem;
+    }
+    
+    .engineering-content {
+        padding: 0 1.5rem;
+    }
+
+    /* 4. Antigravity Bubbles */
+    .bubbles-container {
+        justify-content: center;
+        gap: 1rem;
+        padding: 0;
+    }
+    
+    .float-bubble {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+
+    /* Code Window Overflow Fix */
+    .code-preview-wrapper {
+        margin-top: 3rem;
+        overflow-x: auto; /* Allow scrolling for code */
+        border-radius: 8px;
+    }
+    
+    .code-window {
+        width: 150%; /* Make inner content wider to force scroll if needed, or min-width */
+        min-width: 600px;
+    }
+
+    /* 5. Philosophy Section */
+    .philo-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .philo-headline {
+        font-size: 2.5rem;
+    }
+    
+    .philo-metrics {
+        padding-left: 0;
+        border-left: none;
+        padding-top: 0;
+        gap: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .metric-item {
+        flex: 1 1 45%; 
+        margin-bottom: 1rem;
+    }
+    
+    .metric-val {
+        font-size: 3rem;
+    }
+
+    /* 6. Process Section */
+    .process-visual-section {
+        padding: 0;
+    }
+    
+    .process-row {
+        position: relative; /* Remove sticky on mobile to save space/confusion */
+        height: auto;
+        grid-template-columns: 1fr;
+        border-top: none;
+        margin-bottom: 3rem;
+    }
+    
+    .process-row:nth-child(even) .process-image {
+        order: -1; 
+    }
+    
+    .process-image {
+        height: 300px;
+    }
+    
+    .process-content {
+        padding: 2rem 1.5rem;
+    }
+
+    /* 7. Portfolio Items */
+    .portfolio-grid-visual {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .portfolio-item-visual {
+        aspect-ratio: 16/9; /* Wider on mobile for better view */
+    }
+
+    /* 8. Contact Section & Forms */
+    .contact-section {
+        padding: 60px 1.5rem;
+    }
+    
+    .contact-form {
+        margin-top: 2rem;
+    }
+    
+    .btn-editorial {
+        width: 100%; /* Full width buttons often easier on mobile */
+        justify-content: center;
+    }
+    
+    /* Navbar Tweak */
+    .navbar-brand img {
+        height: 40px;
+    }
+    
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+    }
+    
+    .navbar-collapse {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-top: 1rem;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .nav-item {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin-left: 0 !important;
+        font-size: 1.25rem !important;
+    }
 }
