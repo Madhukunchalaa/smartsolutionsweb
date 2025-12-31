@@ -18,8 +18,8 @@ function createParticleSystem(canvasId) {
     let mouse = { x: -9999, y: -9999, targetX: 0, targetY: 0, currentX: 0, currentY: 0 };
 
     // Configuration
-    const PARTICLE_COUNT = 1500; // Requested Increase
-    const SPOTLIGHT_RADIUS = 450; // Larger reveal area
+    const PARTICLE_COUNT = 2500; // Requested Increase
+    const SPOTLIGHT_RADIUS = 550; // Larger reveal area
     const BASE_OPACITY = 0.15; // Always dimly visible
     const COLORS = ['#F94A29', '#FF7E5F', '#0F172A', '#64748B'];
     const FOCAL_LENGTH = 400;
@@ -31,7 +31,7 @@ function createParticleSystem(canvasId) {
 
         init() {
             // 3D Coordinates
-            this.z = (Math.random() - 0.5) * 1500;
+            this.z = (Math.random() - 0.5) * 500;
 
             // Distribution: Biased Vortex
             // Focus more particles on the Left/Center-Left to frame "We Engineer..."
