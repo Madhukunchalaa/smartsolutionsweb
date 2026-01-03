@@ -15,119 +15,7 @@
     <!-- Fonts: Using System Fonts for Max Speed -->
 
     <style>
-        /* Critical Inline CSS - Hero & Reset */
-        :root {
-            --primary-accent: #F94A29;
-            --text-main: #0F172A;
-            --text-muted: #64748B;
-            --bg-main: #FFFFFF;
-        }
-
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.5;
-        }
-
-        .hero-section {
-            min-height: 90vh;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 80px;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1000px;
-            padding: 2rem;
-        }
-
-        .display-1 {
-            font-size: clamp(2.5rem, 8vw, 6rem);
-            font-weight: 800;
-            letter-spacing: -2px;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .text-accent {
-            color: var(--primary-accent) !important;
-        }
-
-        .bg-canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        .justify-content-center {
-            justify-content: center;
-        }
-
-        .align-items-center {
-            align-items: center;
-        }
-
-        .fs-4 {
-            font-size: 1.5rem !important;
-        }
-
-        .fs-5 {
-            font-size: 1.25rem !important;
-        }
-
-        .fw-bold {
-            font-weight: 700 !important;
-        }
-
-        .mb-4 {
-            margin-bottom: 1.5rem !important;
-        }
-
-        /* Critical Navbar to prevent CLS */
-        .navbar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            z-index: 1030;
-            background-color: #fff;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 1.5rem;
-            padding-bottom: 1.5rem;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        .navbar .container-fluid {
-            width: 100%;
-            padding-right: 1.5rem;
-            padding-left: 1.5rem;
-            margin-right: auto;
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        /* Defer non-critical */
+        /* Critical Styles moved to css/styles.css */
     </style>
 
     <!-- Deferred CSS Loading -->
@@ -200,8 +88,7 @@
                 </div>
                 <div class="services-grid px-5">
                     <div class="service-card">
-                        <img src="assets/images/uiux.jpg" alt="UI Design" width="800" height="600"
-                            loading="lazy">
+                        <img src="assets/images/uiux.jpg" alt="UI Design" width="800" height="600" loading="lazy">
                         <div class="service-content">
                             <h3>UI/UX Design</h3>
                             <p>Immersive interfaces that guide behavior and delight users.</p>
@@ -216,8 +103,8 @@
                         </div>
                     </div>
                     <div class="service-card">
-                        <img src="assets/images/service_cloud.webp" alt="Cloud Infrastructure" width="800" height="532"
-                            loading="lazy">
+                        <img src="assets/images/service_cloud_v2.png" alt="Cloud Infrastructure" width="800"
+                            height="532" loading="lazy">
                         <div class="service-content">
                             <h3>Cloud & Scale</h3>
                             <p>AWS/Azure infrastructure that grows with your business.</p>
@@ -244,8 +131,8 @@
                 </div>
                 <div class="engineering-image">
                     <!-- Using Sourced Indian Tech Team Image -->
-                    <img src="assets/images/team.png" alt="Smart Solutions Team in Bangalore Office"
-                        width="1000" height="667" loading="lazy">
+                    <img src="assets/images/team.png" alt="Smart Solutions Team in Bangalore Office" width="1000"
+                        height="667" loading="lazy">
                 </div>
             </div>
         </section>
@@ -503,4 +390,5 @@
     <!-- JS: Defer for performance -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
+
 </html>
